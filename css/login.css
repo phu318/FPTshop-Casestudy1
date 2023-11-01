@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background-color: #F9689D;
+    text-align: center;
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background-color: #FFD400;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li,
+a {
+    color: black;
+
+}
+
+nav ul li:nth-child(2) a {
+    color: black;
+}
+
+nav ul li:nth-child(2) i {
+    color: black;
+    font-size: 15px;
+    margin-left: 6px;
+
+
+}
+
+nav ul li:nth-child(3) {
+    position: relative;
+}
+
+nav ul li:nth-child(3) input {
+    height: 40px;
+    width: 300px;
+    border-radius: 6px;
+    padding-left: 6px;
+}
+
+nav ul li:nth-child(3) i {
+    position: absolute;
+    font-size: 16px;
+    right: 15px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+nav ul li:nth-child(4) button {
+    height: 40px;
+    padding: 0 12px;
+    cursor: pointer;
+    background-color: #FFBC06;
+    border-radius: 6px;
+}
+
+nav ul li:nth-child(4) button i {
+    margin-right: 6px;
+}
+
+nav ul li:nth-child(5) {
+    text-align: center;
+}
+
+nav ul li:nth-child(6) {
+    text-align: center;
+}
+nav ul li:nth-child(9) button {
+    height: 40px;
+    padding: 0 12px;
+    cursor: pointer;
+    border-radius: 6px;}
+
+.menu-bar {
+    background-color: #FFD400;
+    padding: 12px 0 0;
+
+}
+
+.menu-bar ul {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding-top: 10PX;
+}
+
+.menu-bar ul li a {
+    color: black;
+    font-size: 15px;
+}
+
+.menu-bar ul li a i {
+    margin-left: 6px;
+    font-size: 16px;
+    padding-right: 6px;
+}
+
+
+
+.container-login {
+    width: 400px;
+    position: absolute;
+    border: none;
+    border-radius: 10px;
+    padding: 50px 50px;
+    color: #f5f5f5;
+    box-shadow: 0px 0px 17px 2px rgb(0, 0, 0, 0.8);
+    background-color: #FFD400;
+    
+}
+#form {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins';}
+    #form {
+        /* background: url(../image/nen.avif);
+        block-size: cover;
+        background-position-y: -100px; */
+        background-color: white;
+    }
+
+
+.container-login h1 {
+    text-align: center;
+    color: black;
+}
+
+.form-control {
+    width: 100%;
+    position: relative;
+    margin-top: 40px;
+    display: flex;
+    border-bottom: 2px solid rgb(246, 243, 243);
+}
+
+/* .add-cart{
+    font-size: 70px;
+    padding: 0 150px;
+    margin-top: -100px;
+    margin-bottom: 10px;
+} */
+.form-control i {
+    padding-top: 8px;
+    padding-right: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    color: black;
+}
+
+.form-control input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #FFD400;
+    color: black;
+}
+.form-control input:focus{
+    background-color: #FFD400;
+}
+
+.form-control input::placeholder {
+    color: black;
+}
+
+.form-control span {
+    position: absolute;
+    border-bottom: 3px solid black;
+    width: 0%;
+    left: 0;
+    top: 39px;
+    transition: 0.5s;
+}
+
+.form-control input:focus~span {
+    width: 100%;
+}
+
+.form-control.error small {
+    color: red;
+}
+
+.form-control.error input {
+    border-bottom: 2px solid black;
+}
+
+.btn-sumbit {
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    background: none;
+    /* color: linear-gradient(45deg, #ff0047, #6eff00); */
+    animation: animate 3s linear infinite;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 25px 0;
+    cursor: pointer;
+    border: 3px solid goldenrod;
+}
+.btn-sumbit:hover{
+    border: 3px solid red;
+}
+@keyframes animate {
+    0% {
+        filter: blur(0px) hue-rotate(0deg);
+    }
+
+    100% {
+        filter: blur(0px) hue-rotate(360deg);
+    }
+}
+
+.singnup-link {
+    text-align: center;
+}
+.singnup-link p {
+color: black;}
+
+small {
+    color: red;
+}

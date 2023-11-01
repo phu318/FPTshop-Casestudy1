@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Quản lý sản phẩm nam</title>
+    <link href="css/quanlysanpham.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/admin.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous">
+    </script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bxl-android'></i></span>
+                        <span class="title">QUẢN LÝ SẢN PHẨM</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon"><i class='bx bx-home'></i></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="quanlysanpham.html">
+                        <span class="icon"><i class='bx bxl-product-hunt'></i></span>
+                        <span class="title">Quản lý LAPTOP</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon"><i class='bx bxl-product-hunt'></i></span>
+                        <span class="title">Quản lý ĐIỆN THOẠI</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <span class="icon"><i class='bx bxs-user-account'></i></span>
+                        <span class="title">Quản lý người dùng</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-food-menu'></i></span>
+                        <span class="title">Quản lý đơn hàng</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-captions'></i></span>
+                        <span class="title">Quản lý header</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-message'></i></span>
+                        <span class="title">Message</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-cog'></i></span>
+                        <span class="title">Setting </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class='bx bx-log-in'></i></span>
+                        <span class="title">Sign Out </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search-alt-2'></i>
+                    </label>
+                </div>
+                <div class="letters">
+                    <a href="#"><i class='bx bx-envelope'></i><sup>9</sup></a>
+                    <a href="#"><i class='bx bx-bell'></i><sup class="total-count"
+                        data-count='0'></sup></a>
+                  </div>
+                <div class="user" onclick="settingsMenuToggle()">
+                    <img src="./image/ace1.jpg" width="100" height="100" alt="">
+                </div>
+                <div class="settings-menu">
+                    <div id="dark-btn">
+                      <span></span>
+                    </div>
+                    <div class="settings-menu-inner">
+                      <div class="user-profile">
+                        <img src="./image/ace1.jpg" alt="">
+                        <div>
+                          <p>Nguyễn Quốc Phú</p>
+                          <a href="#">Xem hồ sơ của bạn </a>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="settings-links">
+                        <i class='bx bx-cog icon'></i>
+                        <a href="#">Cài Đặt <i class='bx bxs-chevron-right'></i></a>
+                      </div>
+                      <hr>
+                      <div class="settings-links">
+                        <i class='bx bx-moon icon'></i>
+                        <a href="#">Sáng & Tối<i class='bx bxs-chevron-right'></i></a>
+                      </div>
+                      <hr>
+                      <div class="settings-links">
+                        <i class='bx bx-log-in icon'></i>
+                        <a href="dangnhap.html">Sign Out <i class='bx bxs-chevron-right'></i></a>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="sb-nav-fixed">
+                <div id="layoutSidenav_content">
+                    <div class="product">
+                        <br>
+                        <button class="btn-them-1" data-toggle="modal" data-target="#exampleModal">
+                            <i class="fas fa-plus "></i>KHỞI TẠO</button>
+                        <table class="table">
+                            <thead class="text-center ">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Tên</th>
+                                    <th>Img</th>
+                                    <th>Img2</th>
+                                    <th>Giá</th>
+                                    <th>Giảm giá </th>
+                                    <th>Hành động</th>
+                                    <th>Xóa</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center" id="product-admin">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Thêm sản phẩm</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="" class="form-row">
+                                    <div class="col-12 mt-3">
+                                        <input class="form-control" type="text" id="name" placeholder="name">
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <input class="form-control" type="text" id="img" placeholder="img">
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <input class="form-control" type="text" id="img2" placeholder="img2">
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <input class="form-control" type="number" id="price" placeholder="giá">
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <input class="form-control" type="number" id="pricea" placeholder="giảm giá">
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <input class="form-control" type="text" id="link" placeholder="đường dẫn">
+                                    </div>
+                                    <a class="btn-them mt-3" href="" onclick="addProduct()">Thêm</a>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn-exit" data-dismiss="modal">Exit</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="updateProduct" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Chỉnh sữa sản phẩm</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form class="form-row">
+                                    <div class="col-12">
+                                        <input class="form-control" style="background: #494949; color: white;"
+                                            type="text" id="idd" placeholder="id">
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <input class="form-control" type="text" id="named" placeholder="name">
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <input class="form-control" type="text" id="imgd" placeholder="img">
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <input class="form-control" type="text" id="imge" placeholder="img2">
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <input class="form-control" type="number" id="priced" placeholder="giá">
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <input class="form-control" type="number" id="pricex" placeholder="giảm giá">
+                                    </div>
+                                    <div class="col-12 mt-3">
+                                        <input class="form-control" type="text" id="linkk" placeholder="đường dẫn">
+                                    </div>
+                                </form>
+                                <div id="submitUpdate">
+                                    <button onclick="submitUpdate(0)">Đồng ý</button>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn-exit" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    /// toggle///
+    let toggle = document.querySelector('.toggle');
+    let navigation = document.querySelector('.navigation');
+    let main = document.querySelector('.main');
+
+    // toggle.onclick = function () {
+    //     navigation.classList.toggle('active')
+    //     main.classList.toggle('active')
+    // }
+
+
+
+    /////
+    let list = document.querySelectorAll('.navigation li');
+
+    function activeLink() {
+        list.forEach((item) =>
+            item.classList.remove('hovered'));
+        this.classList.add('hovered');
+    }
+    list.forEach((item) =>
+        item.addEventListener('mouseover', activeLink));
+</script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+</script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+<script src="assets/demo/datatables-demo.js"></script>
+
+<script src="js/scripts.js"></script>
+<script src="js/quanlysanpham.js"></script>
+</html>

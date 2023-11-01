@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THẾ GIỚI DI ĐỘNG</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/login.css">
+
+</head>
+
+<body>
+    <header>
+        <img src="./image/DH-Ty-Ty-1200-44-1200x44.webp" alt="">
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href=""><img style="width: 170px;height: 60px;" src="./image/Logo-The-Gioi-Di-Dong-MWG-.png"
+                            alt=""></a></li>
+                <li><a href=""> Huế<i class="fa-solid fa-sort-down"></i></a></li>
+                <li><input type="text" placeholder="Nhập sản phẩm cần tìm"><i class="fa-solid fa-magnifying-glass"></i>
+                </li>
+                <li><a href=""></a><button><i class="fa-solid fa-cart-shopping"></i>Giỏ Hàng</button></li>
+                <li><a href="">Lịch sử <br> đơn hàng</a></li>
+                <li><a href="">24h <br> Công Nghệ</a></li>
+                <li><a href="">Hỏi Đáp</a></li>
+                <li><a href="">Game App</a></li>
+                <li><a href="dangnhap.html"></a><button><i class="fa-solid fa-user"></i></i> Đăng Nhập</button></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="menu-bar">
+        <div class="container">
+            <div class="menu-bar-content">
+                <ul>
+                    <li><a href=""><i class="fa-solid fa-mobile-screen-button"></i>Điện thoại</a></li>
+                    <li><a href=""><i class="fa-solid fa-laptop"></i>Laptop</a></li>
+                    <li><a href=""><i class="fa-solid fa-tablet"></i></a>Tablet</li>
+                    <li><a href=""><i class="fa-solid fa-headphones"></i></a>Phụ kiện</li>
+                    <li><a href=""><i class="fa-solid fa-stopwatch"></i></a>SmartWatch</li>
+                    <li><a href=""><i class="fa-regular fa-clock"></i></a>Đồng hồ</li>
+                    <li><a href=""><i class="fa-solid fa-mobile"></i></a>Máy cũ giá rẻ</li>
+                    <li><a href=""><i class="fa-solid fa-computer"></i></a>PC,Máy in <i
+                            class="fa-solid fa-sort-down"></i></li>
+                    <li><a href=""></a>Sim,Thẻ cào</li>
+                    <li><a href="">Dịch vụ tiện ích <i class="fa-solid fa-sort-down"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="form" >
+        <div class="container-login">
+            <h1>Đăng nhập</h1>
+            <form >
+                <div class="form-control">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Họ và Tên" name="username1" id="username1" onkeyup="validatedn()">
+                    <span></span>
+                </div>
+                <small id="name"></small>
+
+                <div class="form-control">
+                    <i class="fa-solid fa-unlock-keyhole"></i>
+                    <input type="password" placeholder="******" name="password1" id="password1" onkeyup="validatepass()">
+                    <i class="bi bi-eye-slash" id="togglePassword"></i>
+                    <span></span>
+                    <!-- <span id="te"></span> -->
+                </div>
+                <small id="pass"></small>
+                <div class="form-check" style="margin-top: 40px;">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label text-white" for="exampleCheck1">Ghi nhớ mật khẩu</label>
+                </div>
+            </form>
+            <button type="submit" class="btn-sumbit" onclick=" validate()">ĐĂNG NHẬP</button>
+            <div class="singnup-link">
+                <p>Bạn chưa có tài khoản ?</p> <a style="color: blue;" href="dangky.html">Đăng ký</a>
+            </div>
+        </div>
+    </section>
+    <SCript src="./js/dangnhap.js">
+
+    </SCript>

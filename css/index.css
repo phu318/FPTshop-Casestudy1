@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+}
+
+header {
+    background-color: #F9689D;
+    text-align: center;
+
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    background-color: #FFD400;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li,
+a {
+    color: black;
+
+}
+
+nav ul li:nth-child(2) a {
+    color: black;
+}
+
+nav ul li:nth-child(2) i {
+    color: black;
+    font-size: 15px;
+    margin-left: 6px;
+
+
+}
+
+nav ul li:nth-child(3) {
+    position: relative;
+}
+
+nav ul li:nth-child(3) input {
+    height: 40px;
+    width: 300px;
+    border-radius: 6px;
+    padding-left: 6px;
+}
+
+nav ul li:nth-child(3) i {
+    position: absolute;
+    font-size: 16px;
+    right: 15px;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+nav ul li:nth-child(4) button {
+    height: 40px;
+    padding: 0 12px;
+    cursor: pointer;
+    background-color: #FFBC06;
+    border-radius: 6px;
+}
+
+nav ul li:nth-child(4) button i {
+    margin-right: 6px;
+}
+
+nav ul li:nth-child(5) {
+    text-align: center;
+}
+
+nav ul li:nth-child(6) {
+    text-align: center;
+}
+
+nav ul li:nth-child(9) button {
+    height: 40px;
+    padding: 0 12px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+nav ul li:nth-child(10) button {
+    height: 40px;
+    padding: 0 12px;
+    cursor: pointer;
+    border-radius: 6px;}
+
+.menu-bar {
+    background-color: #FFD400;
+    padding: 12px 0 0;
+
+}
+
+.menu-bar ul {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    padding-top: 10PX;
+}
+
+.menu-bar ul li a {
+    color: black;
+    font-size: 15px;
+}
+
+.menu-bar ul li a i {
+    margin-left: 6px;
+    font-size: 16px;
+    padding-right: 6px;
+}
+
+.img-advertisement img {
+    width: 100%;
+    height: 500px;
+    display: block;
+
+}
+
+.product {
+    padding-top: 50px;
+    background-color: #25304B;
+}
+
+.product h1 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    color: white;
+}
+
+.main-product {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0px 100px;
+}
+
+.product-items {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10px;
+    color: black;
+    width: calc(calc(100% - 90px) / 4);
+    background-color: white;
+    border-radius: 8px;
+}
+
+.product-items h4 {
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.product-items h3 {
+    padding: 10px 10px;
+    text-align: center;
+}
+
+.product img {
+    width: 100%;
+    padding: 0 10px;
+}
+
+.product-items button {
+
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    will-change: box-shadow, transform;
+    background: radial-gradient(100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100%);
+    box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
+    padding: 0 32px;
+    border-radius: 6px;
+    color: #fff;
+    height: 48px;
+    font-size: 18px;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.product-items button:hover {
+    box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #3c4fe0;
+    transform: translateY(-2px);
+}
+
+.items {
+    text-align: center;
+    padding: 50px;
+}
+
+.items button {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #FEC100;
+    width: 50%;
+}
+
+.shopping {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid black;
+}
+
+.shopping img {
+    width: 50px;
+    height: 50px;
+}
+.shopping input{
+    width: 50px;
+    padding-right: 6px;
+}
+
+#cart-container{
+    position: relative;
+}
+#cart-container .shop{
+    display: none;
+    position: absolute;
+    background-color: #FFD400;
+    min-width: 350px;
+    right: 0;
+    top: 100%;
+    border-radius: 8px;
+}

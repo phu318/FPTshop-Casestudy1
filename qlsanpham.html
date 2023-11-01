@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="text-align: center;padding-bottom: 30px;">PROCUCT MANAGEMENT</h1>
+      <div class="frmCreate">
+        <div class="row">
+          <label for="">Product Name:</label>
+          <input name="txtName" type="text" placeholder="Enter yourname" />
+        </div>
+        <div class="row">
+          <label for="">Quantity:</label>
+          <input
+            name="txtQuantity"
+            type="number"
+            placeholder="Enter quantity"
+          />
+        </div>
+        <div class="row">
+          <label for="">Price:</label>
+          <input name="txtPrice" type="number" placeholder="Enter price" />
+        </div>
+        <div class="row">
+          <label for="">Category:</label>
+          <select name="sCategory">
+            <option value="1">Laptop</option>
+            <option value="2">Điện thoại</option>
+            <option value="3">Phụ kiện</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for=""></label>
+          <button class="btnAdd" onclick="handleBtnAdd()">Add</button>
+        </div>
+      </div>
+      <div class="tbMain">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Product Name</th>
+              <th>Category</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Amount</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tbodyMain">
+            <tr>
+              <td>P1</td>
+              <td>MSI</td>
+              <th>LapTop</th>
+              <td>5</td>
+              <td>120000</td>
+              <td>600000</td>
+              <td>
+                <a href="" class="btn btn-edit"
+                  ><i class="fa-solid fa-pen-to-square"></i
+                ></a>
+                <a href="" class="btn btn-delete"
+                  ><i class="fa-solid fa-trash"></i
+                ></a>
+              </td>
+            </tr>
+            <tr>
+              <td>P1</td>
+              <td>Ga</td>
+              <th>Gia cầm</th>
+              <td>5</td>
+              <td>120000</td>
+              <td>600000</td>
+              <td>
+                <a href="" class="btn btn-edit"
+                  ><i class="fa-solid fa-pen-to-square"></i
+                ></a>
+                <a href="" class="btn btn-delete"
+                  ><i class="fa-solid fa-trash"></i
+                ></a>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="5" class="tb-last-row tb-last-row-total">
+                Total amount
+              </td>
+              <td class="tb-last-row">4.955.899 ₫</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="./js/add.js"></script>
+    <script src="./js/dashboard.js"></script>
+  </body>
+</html>
